@@ -25,14 +25,18 @@ int main() {
     float fval = (float) ival;
     int *pval = &ival;
 
-    show_int(ival);
-    show_float(fval);
-    show_pointer(pval);
+    // show_int(ival);
+    // show_float(fval);
+    // show_pointer(pval);
 
 /* Add your test cases here in order
    to test the functions you have modified 
    and the functions you have created. */
 
+    // Q3.a
+    show_bytes((byte_pointer) &ival, sizeof(int));
+    show_bytes((byte_pointer) &fval, sizeof(float));
+    show_bytes((byte_pointer) pval, sizeof(int));
     return 0;
 
 }
