@@ -36,7 +36,12 @@ int main() {
     // Q3.a
     show_bytes((byte_pointer) &ival, sizeof(int));
     show_bytes((byte_pointer) &fval, sizeof(float));
-    show_bytes((byte_pointer) pval, sizeof(int));
+    show_bytes((byte_pointer) &pval, sizeof(int));
+
+    // Q3.c
+    show_bytes_2((byte_pointer) &ival, sizeof(int));
+    show_bytes_2((byte_pointer) &fval, sizeof(float));
+    show_bytes_2((byte_pointer) &pval, sizeof(int));
     return 0;
 
 }
