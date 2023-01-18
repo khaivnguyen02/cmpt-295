@@ -38,7 +38,14 @@ void show_bytes_2(byte_pointer start, size_t len) {
 void show_bits(int decimal) {
 	
   // put your code here!
+  int i, temp, andMask;
 
+  for (i = 31; i >= 0; i--) {
+    andMask = 1 << i;
+    temp = decimal & andMask;
+    temp == 0 ? printf("0") : printf("1");
+   }
+   printf("\n");
   return; 
 }	
 
