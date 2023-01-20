@@ -3,8 +3,8 @@
  *
  * Description:
  *
- * Auhtors: AL + <your name>
- * Student number: <your student number>
+ * Author: Van Khai Nguyen
+ * Student number: 3015 38378
  */
 
 #include <stdio.h>
@@ -23,6 +23,8 @@ void show_bytes(byte_pointer start, size_t len) {
 
 // Question 3 b.
 // Put your answer to Question 3 b) here as a comment
+/*
+*/
 
 
 // Question 3 c.
@@ -54,9 +56,22 @@ void show_bits(int decimal) {
 int mask_LSbits(int n) {
 	
   // put your code here!
+  int length = sizeof(int) * 8;
+  int result = 0;
 
-  // feel free to modify this return statement
-  return 0; 
+  if (n >= length) {
+    return -1; // 111...111 (32 bits) == -1
+  }
+
+  if (n <= 0) {
+    return 0;
+  }
+
+  // Flip 000...000 (32 bits) ---> 111...111
+  // Left Shift 111...111 n times ---> 111...000 (with n 0's LSb)
+  // Flip once again to get the answer
+  return ~(~result << n);
+
 }
 
 void show_int(int x) {

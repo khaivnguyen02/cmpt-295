@@ -47,6 +47,11 @@ int main() {
     // show_bits(12345);
     // show_bits(-12345);
 
+    // Q3.e
+    printf("%d\n",mask_LSbits(4));
+    printf("%d\n",mask_LSbits(5));
+    printf("%d\n",mask_LSbits(0));
+    printf("%d\n", mask_LSbits(32));
     return 0;
 
 }
