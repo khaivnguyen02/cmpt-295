@@ -24,8 +24,17 @@ void show_bytes(byte_pointer start, size_t len) {
 // Question 3 b.
 // Put your answer to Question 3 b) here as a comment
 /*
-*/
+  Answer: Little Endian
+  Explain: Test the show_bytes() function: show_bytes(12345)
+  Output: ival = 12345
+  0x7ffeb30b1eac 0x39
+  0x7ffeb30b1ead 0x30
+  0x7ffeb30b1eae 0x00
+  0x7ffeb30b1eaf 0x00
 
+  12345 -> OX003039
+  As the Least Significant Byte -> Least Number Memory Address --> Little Endian.
+*/
 
 // Question 3 c.
 void show_bytes_2(byte_pointer start, size_t len) {
@@ -40,15 +49,15 @@ void show_bytes_2(byte_pointer start, size_t len) {
 void show_bits(int decimal) {
 	
   // put your code here!
-  int i, temp, andMask;
+  int i, temp, and;
 
   for (i = 31; i >= 0; i--) {
-    andMask = 1 << i;
-    temp = decimal & andMask;
+    and = 1 << i;
+    temp = decimal & and;
     temp == 0 ? printf("0") : printf("1");
    }
-   printf("\n");
-  return; 
+  printf("\n"); 
+  return;
 }	
 
 

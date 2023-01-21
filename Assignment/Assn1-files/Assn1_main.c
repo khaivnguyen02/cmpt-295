@@ -34,9 +34,9 @@ int main() {
    and the functions you have created. */
 
     // Q3.a
-    // show_bytes((byte_pointer) &ival, sizeof(int));
-    // show_bytes((byte_pointer) &fval, sizeof(float));
-    // show_bytes((byte_pointer) &pval, sizeof(int));
+    show_bytes((byte_pointer) &ival, sizeof(int));
+    show_bytes((byte_pointer) &fval, sizeof(float));
+    show_bytes((byte_pointer) &pval, sizeof(int));
 
     // Q3.c
     // show_bytes_2((byte_pointer) &ival, sizeof(int));
@@ -48,10 +48,10 @@ int main() {
     // show_bits(-12345);
 
     // Q3.e
-    printf("%d\n",mask_LSbits(4));
-    printf("%d\n",mask_LSbits(5));
-    printf("%d\n",mask_LSbits(0));
-    printf("%d\n", mask_LSbits(32));
+    // printf("%d\n",mask_LSbits(4));
+    // printf("%d\n",mask_LSbits(5));
+    // printf("%d\n",mask_LSbits(0));
+    // printf("%d\n", mask_LSbits(32));
     return 0;
 
 }
