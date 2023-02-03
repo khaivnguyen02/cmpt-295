@@ -1,8 +1,10 @@
 /*
  * Filename: decode2.c
  * 
- * Description: Problem 3.58
+ * Description: Assignment 3 - Q3
+ * 
  * Author: Van Khai Nguyen (SFU ID: 3015 38378)
+ * 
  * Modification date: Feb 1 2023
  */ 
 
@@ -57,3 +59,5 @@ int main(int argc, char *argv[]) {
     }
     return 0;
 }
+
+// end of decode2.c
