@@ -2,8 +2,7 @@
 	.file	"decode2.c"
 	.text
 	.globl	decode2
-	.type	decode2, @function
-: 					 
+	.type	decode2, @function					 
 # Function decode2
 # Parameter-to-register mapping
 # x -> %rdi, y -> %rsi, z -> %rdx, result -> %rax
