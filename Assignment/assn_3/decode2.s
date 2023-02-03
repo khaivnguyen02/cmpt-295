@@ -1,21 +1,24 @@
+# Start of assembly file "decode2.s"
 	.file	"decode2.c"
 	.text
 	.globl	decode2
 	.type	decode2, @function
-# Parameter-to-register mapping: x -> %rdi, y -> %rsi, z -> %rdx
-# 								 result -> %rax
-# decode2:
-# .LFB39:
-# 	.cfi_startproc
-# 	endbr64
-# 	subq	%rdx, %rsi -> y -= z;
-# 	imulq	%rsi, %rdi -> x *= y;
-# 	salq	$63, %rsi -> y << 63; (Left Shift)
-# 	sarq	$63, %rsi -> y >> 63; (Right Arithmetic Shift)
-# 	movq	%rdi, %rax -> result = x;
-# 	xorq	%rsi, %rax -> result ^ y;
-# 	ret -> return result
-# 	.cfi_endproc
+: 					 
+# Function decode2
+# Parameter-to-register mapping
+# x -> %rdi, y -> %rsi, z -> %rdx, result -> %rax
+decode2:
+.LFB39:
+ 	.cfi_startproc
+ 	endbr64
+ 	subq	%rdx, %rsi # y -= z;
+ 	imulq	%rsi, %rdi # x *= y;
+ 	salq	$63, %rsi  # y << 63; (Left Shift)
+ 	sarq	$63, %rsi  # y >> 63; (Right Arithmetic Shift)
+ 	movq	%rdi, %rax # result = x;
+ 	xorq	%rsi, %rax # result ^ y;
+ 	ret
+ 	.cfi_endproc
 .LFE39:
 	.size	decode2, .-decode2
 	.section	.rodata.str1.8,"aMS",@progbits,1
