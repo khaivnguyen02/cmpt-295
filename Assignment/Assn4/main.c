@@ -11,7 +11,7 @@
 #include <stdlib.h>  // atoi()
 #include <stdio.h>   // printf()
 
-int XX(int x, int y);  // Make sure you change the name of this function - see calculator.s
+int isLess(int x, int y);  // Make sure you change the name of this function - see calculator.s
 int plus(int x, int y);
 int minus(int x, int y);
 int mul(int x, int y);
@@ -26,8 +26,8 @@ int main(int argc, char *argv[]) {
     x = atoi(argv[1]);
     y = atoi(argv[2]);
 
-    result = XX(x, y); // Make sure you change the name of this function - see calculator.s
-    printf("%d ??? %d -> %d\n", x, y, result); // Make sure you change ??? to the appropriate symbol
+    result = isLess(x, y); // Make sure you change the name of this function - see calculator.s
+    printf("%d is less than %d -> %d\n", x, y, result); // Make sure you change ??? to the appropriate symbol
 
     result = plus(x, y);
     printf("%d + %d = %d\n", x, y, result);
@@ -36,8 +36,7 @@ int main(int argc, char *argv[]) {
     printf("%d - %d = %d\n", x, y, result);
 
     result = mul(x, y);
-     printf("%d * %d = %d\n", x, y, result);
-
+    printf("%d * %d = %d\n", x, y, result);
   } else {
       printf("Must supply 2 integers arguments.\n");
       return 1;
